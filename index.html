@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try {document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("veloz_theme") || "light")} catch (e) { }</script>
+  <title>Veloz Express · Envíos express</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Work+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container"><span>✉</span> <span>Escríbenos:</span> <a id="mailTop" href="mailto:" data-noi18n></a></div>
+  </div>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dominante sticky-top">
+    <div class="container"><a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" data-go="inicio"><img
+          src="assets/logo.svg" width="36" height="36" alt="Logo Veloz"><span class="marca">Veloz Express</span></a>
+      <div class="nav-tools d-flex gap-2 ms-auto me-2 ms-md-3 me-md-0 order-md-last" data-noi18n><button id="btnLang"
+          type="button" class="btn btn-sm btn-outline-light"></button><button id="btnTheme" type="button"
+          class="btn btn-sm btn-outline-light"></button></div><button class="navbar-toggler" data-bs-toggle="collapse"
+        data-bs-target="#menu" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio" data-go="inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto" data-go="inicio" data-scroll="contacto">Contacto</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#investigacion" data-go="investigacion">Investigación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quiz" data-go="quiz">Quiz</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page active" id="page-inicio">
+    <header class="hero">
+      <div class="container">
+        <h1>Tu paquete llega hoy, no mañana.</h1>
+        <p class="mt-3 fs-5">Envíos express puerta a puerta para tiendas en línea y personas que no pueden esperar.</p>
+        <a href="#contacto" class="btn btn-acento btn-lg mt-3">Cotizar un envío</a>
+      </div>
+    </header>
+    <main class="container my-5">
+      <section id="producto" class="mb-5">
+        <h2 class="mb-4">Ficha del producto</h2>
+        <div class="row g-4">
+          <div class="col-md-8">
+            <div class="card card-info p-4 h-100">
+              <h3>Servicio Veloz Express</h3>
+              <p><strong>Descripción:</strong> Servicio de mensajería con recolección en el día, rastreo en tiempo real
+                y entrega en 24 horas dentro del país.</p>
+              <p><strong>Público objetivo:</strong> Emprendedores, tiendas en línea y familias que envían documentos o
+                paquetes con urgencia.</p>
+              <p class="mb-0"><strong>Propuesta de valor:</strong> Velocidad garantizada, precio claro y notificación en
+                cada etapa del envío.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-info p-4 h-100">
+              <h3>Identidad gráfica</h3><img src="assets/logo.svg" width="80" alt="Logotipo Veloz Express" class="mb-3">
+              <div class="d-flex gap-3 flex-wrap small">
+                <div>
+                  <div class="swatch" style="background:#14213D"></div>#14213D<br>Confianza
+                </div>
+                <div>
+                  <div class="swatch" style="background:#1D4E89"></div>#1D4E89<br>Tecnología
+                </div>
+                <div>
+                  <div class="swatch" style="background:#F5B700"></div>#F5B700<br>Urgencia
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <div id="carouselVeloz" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+          <div class="carousel-indicators"><button data-bs-target="#carouselVeloz" data-bs-slide-to="0" class="active"
+              aria-label="Diapositiva 1"></button><button data-bs-target="#carouselVeloz" data-bs-slide-to="1"
+              aria-label="Diapositiva 2"></button><button data-bs-target="#carouselVeloz" data-bs-slide-to="2"
+              aria-label="Diapositiva 3"></button></div>
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="assets/slide1.svg" class="d-block w-100"
+                alt="Entrega en 24 horas"></div>
+            <div class="carousel-item"><img src="assets/slide2.svg" class="d-block w-100" alt="Rastreo en tiempo real">
+            </div>
+            <div class="carousel-item"><img src="assets/slide3.svg" class="d-block w-100" alt="Cobertura nacional">
+            </div>
+          </div>
+          <button class="carousel-control-prev" data-bs-target="#carouselVeloz" data-bs-slide="prev"><span
+              class="carousel-control-prev-icon"></span><span class="visually-hidden">Anterior</span></button>
+          <button class="carousel-control-next" data-bs-target="#carouselVeloz" data-bs-slide="next"><span
+              class="carousel-control-next-icon"></span><span class="visually-hidden">Siguiente</span></button>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2 class="mb-2">Envíanos un mensaje</h2>
+        <p class="text-secondary">Tu mensaje llega al correo de la empresa y al canal de Discord del equipo.</p>
+        <div class="row">
+          <div class="col-lg-7">
+            <form id="formContacto" class="card p-4 border-0 shadow-sm" novalidate>
+              <div class="mb-3"><label for="nombre" class="form-label">Nombre</label><input id="nombre" name="nombre"
+                  class="form-control" required></div>
+              <div class="mb-3"><label for="correo" class="form-label">Correo</label><input id="correo" name="correo"
+                  type="email" class="form-control" required></div>
+              <div class="mb-3"><label for="mensaje" class="form-label">Mensaje</label><textarea id="mensaje"
+                  name="mensaje" rows="4" class="form-control" required></textarea></div>
+              <button id="btnEnviar" class="btn btn-acento btn-lg" type="submit">Enviar mensaje</button>
+              <div id="resultado" class="mt-3" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="page" id="page-investigacion">
+    <main class="container my-5">
+      <h1 class="mb-4">Investigación técnica</h1>
+      <ul class="nav nav-tabs mb-4">
+        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+            data-bs-target="#js">JavaScript</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#jq">jQuery</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#json">JSON</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#host">Hosting y
+            dominios</button></li>
+      </ul>
+      <div class="tab-content">
+
+        <div class="tab-pane fade show active" id="js">
+          <h2>JavaScript (Vanilla)</h2>
+          <p>JavaScript es el lenguaje de programación de la web: agrega comportamiento a las páginas.
+            <strong>HTML</strong> define la estructura, <strong>CSS</strong> el aspecto y <strong>JS</strong> la lógica
+            y la interacción.</p>
+          <ul>
+            <li><strong>Variables:</strong> guardan datos (<code>let</code>, <code>const</code>).</li>
+            <li><strong>Funciones:</strong> bloques de código reutilizables.</li>
+            <li><strong>Eventos:</strong> reacciones a acciones del usuario (clic, envío, teclado).</li>
+          </ul>
+          <pre>const tarifa = 5;                         // variable
+function costo(kg){ return kg * tarifa; } // función
+btn.addEventListener("click", () =&gt; {     // evento
+  alert("Costo: $" + costo(3));
+});</pre>
+          <div class="card p-3"><label for="kg" class="form-label">Calculadora de envío ($5 por kg)</label>
+            <div class="input-group"><input id="kg" type="number" min="1" value="3" class="form-control"><button
+                id="calc" class="btn btn-acento">Calcular</button></div>
+            <p id="costoOut" class="mt-2 mb-0 fw-bold"></p>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="jq">
+          <h2>jQuery</h2>
+          <p>Librería creada por John Resig en 2006 para simplificar el manejo del DOM, los eventos y las animaciones, y
+            resolver diferencias entre navegadores. Su sintaxis usa el símbolo <code>$</code>:
+            <code>$("selector").acción()</code>.</p>
+          <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+              <thead>
+                <tr>
+                  <th>Tarea</th>
+                  <th>JavaScript vanilla</th>
+                  <th>jQuery</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Seleccionar</td>
+                  <td><code>document.querySelector(".a")</code></td>
+                  <td><code>$(".a")</code></td>
+                </tr>
+                <tr>
+                  <td>Ocultar</td>
+                  <td><code>el.style.display="none"</code></td>
+                  <td><code>$(".a").hide()</code></td>
+                </tr>
+                <tr>
+                  <td>Evento</td>
+                  <td><code>el.addEventListener("click",f)</code></td>
+                  <td><code>$(".a").click(f)</code></td>
+                </tr>
+                <tr>
+                  <td>Animar</td>
+                  <td>CSS / Web Animations</td>
+                  <td><code>$(".a").slideToggle()</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Ventajas:</strong> código corto, efectos listos, AJAX sencillo. <strong>Desventaja:</strong> carga
+            una librería extra que hoy muchas veces no es necesaria.</p>
+          <button id="btnFx" class="btn btn-acento mb-2">Mostrar / ocultar</button> <button id="btnFade"
+            class="btn btn-outline-dark mb-2">Desvanecer</button>
+          <div id="cajaFx" class="p-4 text-white rounded" style="background:var(--secundario)"> Tu paquete va en
+            camino</div>
+        </div>
+
+        <div class="tab-pane fade" id="json">
+          <h2>JSON</h2>
+          <p>JavaScript Object Notation es un formato de texto ligero para intercambiar datos, basado en pares
+            <strong>clave-valor</strong>. Es el estándar de las APIs web porque cualquier lenguaje puede leerlo.</p>
+          <pre id="jsonEj">{
+  "guia": "VX-1024",
+  "cliente": "Ana López",
+  "estado": "En tránsito",
+  "peso_kg": 2.5,
+  "urgente": true,
+  "etapas": ["Recolectado", "En ruta"]
+}</pre>
+          <button id="btnJson" class="btn btn-acento">Leer con JSON.parse()</button>
+          <p id="jsonOut" class="mt-2 fw-bold"></p>
+          <p>Las APIs se consumen con <code>fetch(url).then(r =&gt; r.json())</code>. Este proyecto usa JSON para enviar
+            datos al webhook de Discord y al correo.</p>
+        </div>
+
+        <div class="tab-pane fade" id="host">
+          <h2>Web hosting y dominios</h2>
+          <p>Un <strong>servidor</strong> es una computadora siempre encendida que entrega archivos web. El
+            <strong>hosting</strong> es el servicio que alquila ese espacio.</p>
+          <p><strong>Vercel</strong> despliega sitios estáticos desde GitHub: cada <code>git push</code> genera una
+            nueva versión publicada en una red global (CDN) con HTTPS automático.</p>
+          <p>Un <strong>dominio</strong> es la dirección legible (<code>veloz.com</code>); el DNS la traduce a una IP.
+            Un <strong>TLD</strong> es la terminación: <code>.com</code>, <code>.org</code>, <code>.sv</code> (país). La
+            <strong>propagación DNS</strong> es el tiempo (de minutos a 48 h) que tardan los servidores del mundo en
+            enterarse de un cambio.</p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <div class="page" id="page-quiz">
+    <main class="container my-5" style="max-width:800px">
+      <h1>Quiz de Conocimientos Web</h1>
+      <p class="text-secondary">Responde las 8 preguntas y revisa tu resultado.</p>
+      <form id="quiz"></form><button id="btnQuiz" class="btn btn-acento btn-lg">Calificar</button> <button id="btnReset"
+        class="btn btn-outline-dark btn-lg">Reiniciar</button>
+      <div id="puntaje" class="alert alert-info mt-4 d-none" role="status"></div>
+    </main>
+  </div>
+  <footer class="bg-dominante text-white-50 py-4 mt-5">
+    <div class="container small">© 2026 Veloz Express · Proyecto académico</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/investigacion.js"></script>
+  <script src="js/navegacion.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>
